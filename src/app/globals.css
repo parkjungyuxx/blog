@@ -1,26 +1,77 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-background: #ffffff;
+  --color-foreground: #3c3c43;
+  
+  --color-card: #fafafa;
+  --color-card-foreground: #3c3c43;
+  
+  --color-popover: #ffffff;
+  --color-popover-foreground: #3c3c43;
+  
+  --color-primary: #ff8a33;
+  --color-primary-foreground: #ffffff;
+  
+  --color-secondary: #f5f5f7;
+  --color-secondary-foreground: #3c3c43;
+  
+  --color-muted: #f5f5f7;
+  --color-muted-foreground: #8e8e93;
+  
+  --color-accent: #f5f5f7;
+  --color-accent-foreground: #3c3c43;
+  
+  --color-destructive: #ff3b30;
+  --color-destructive-foreground: #ffffff;
+  
+  --color-border: #e5e5ea;
+  --color-input: #e5e5ea;
+  --color-ring: #ff8a33;
+  
+  --color-icon: #8e8e93;
+  
+  --radius: 0.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --color-background: #121212;
+  --color-foreground: #e5e5e7;
+  
+  --color-card: #1c1c1e;
+  --color-card-foreground: #e5e5e7;
+  
+  --color-popover: #1c1c1e;
+  --color-popover-foreground: #e5e5e7;
+  
+  --color-primary: #ff9500;
+  --color-primary-foreground: #121212;
+  
+  --color-secondary: #2c2c2e;
+  --color-secondary-foreground: #e5e5e7;
+  
+  --color-muted: #2c2c2e;
+  --color-muted-foreground: #8e8e93;
+  
+  --color-accent: #2c2c2e;
+  --color-accent-foreground: #e5e5e7;
+  
+  --color-destructive: #ff453a;
+  --color-destructive-foreground: #e5e5e7;
+  
+  --color-border: #3a3a3c;
+  --color-input: #3a3a3c;
+  --color-ring: #ff9500;
+  
+  --color-icon: #8e8e93;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--color-border);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  transition: background-color 0.2s, color 0.2s;
 }
