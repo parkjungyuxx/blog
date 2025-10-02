@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TypingText from "@/components/TypingText";
 
 export default function Home() {
   return (
@@ -9,12 +10,7 @@ export default function Home() {
             <h1 className="text-[144px] font-bold text-black">(+82)</h1>
             <h1 className="text-[144px] font-bold text-black">micky.log</h1>
           </div>
-          <p className="text-black text-[28px] leading-snug">
-            I am a developer who always{" "}
-            <span className="underline inline-block">thinks</span>,{" "}
-            <span className="underline inline-block">communicates</span>, and{" "}
-            <span className="underline inline-block">solves problems</span>.
-          </p>
+          <TypingText />
         </div>
 
         <div className="flex flex-col gap-4">
