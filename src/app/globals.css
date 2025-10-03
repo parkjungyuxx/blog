@@ -20,8 +20,11 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: underline;
+}
+
+a:not(.gradient-link) {
+  color: inherit;
 }
 
 a:visited {
@@ -43,4 +46,16 @@ a:visited {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: -100% 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
 }

@@ -15,7 +15,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-4">
           <Link
-            href="/"
+            href="/resume"
             className="text-[40px] text-black font-medium transition-colors"
           >
             Resume
