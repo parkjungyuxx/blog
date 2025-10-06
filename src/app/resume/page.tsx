@@ -1,3 +1,4 @@
+import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 
 export default function Resume() {
@@ -102,7 +103,12 @@ export default function Resume() {
                 </div>
                 <ul className="list-disc list-inside text-black space-y-1">
                   <li className="leading-normal">
-                   싱글모드 구현
+                    <AnimatedText
+                      gifSrc="/images/singlemode.gif"
+                      gifAlt="싱글모드 구현 데모"
+                    >
+                      싱글모드 구현
+                    </AnimatedText>
 
                     <ul className="list-none ml-6 mt-1 space-y-1">
                       <li>
@@ -111,7 +117,13 @@ export default function Resume() {
                       </li>
                       <li>
                         - AI 예측 대기 시간 동안 사용자의 불안감 해소를 위해
-                        Custom Hook 기반의 5단계 진행 메시지 및 프로그레스 바
+                        Custom Hook 기반의 5단계 진행 메시지 및{" "}
+                        <AnimatedText
+                          gifSrc="/images/progressbar.gif"
+                          gifAlt="프로그레스 바"
+                        >
+                          프로그레스 바
+                        </AnimatedText>{" "}
                         인터랙션 구현.
                       </li>
                     </ul>
@@ -125,7 +137,14 @@ export default function Resume() {
                     </ul>
                   </li>
                   <li>
-                    실시간 채팅 구현
+                    {" "}
+                    <AnimatedText
+                      gifSrc="/images/chatting.gif"
+                      gifAlt="실시간 채팅 구현"
+                      isVertical={true}
+                    >
+                      실시간 채팅 구현
+                    </AnimatedText>
                     <ul className="list-none ml-6 mt-1 space-y-1">
                       <li>- Supabase Realtime 기반 실시간 채팅 구현</li>
                     </ul>
@@ -156,7 +175,6 @@ export default function Resume() {
                 <div className="text-black font-medium mb-2">성과</div>
               </td>
               <td className="py-6 px-4 align-top w-2/3">
-                <div className="text-black mb-4">진행적인 인터렉션 구현</div>
                 <ul className="list-disc list-inside text-black space-y-1">
                   <li>
                     싱글모드 게임 최적화
@@ -241,13 +259,33 @@ export default function Resume() {
                 </div>
                 <ul className="list-disc list-inside text-black space-y-1">
                   <li>
-                    랜딩 페이지 인터랙션 구현
+                    <AnimatedText
+                      gifSrc="/images/gsap.gif"
+                      gifAlt="랜딩 페이지"
+                      isVertical={true}
+                    >
+                      랜딩 페이지
+                    </AnimatedText>{" "}
+                    인터랙션 구현
                     <ul className="list-none ml-6 mt-1 space-y-1">
                       <li>- GSAP을 활용한 스크롤 기반 애니메이션 구현.</li>
                     </ul>
                   </li>
                   <li>
-                    그룹 관리 및 데이터 시각화
+                    <AnimatedText
+                      gifSrc="/images/members.gif"
+                      gifAlt="그룹 관리 및"
+                      isVertical={true}
+                    >
+                      그룹 관리 및
+                    </AnimatedText>{" "}
+                    <AnimatedText
+                      gifSrc="/images/statistics.gif"
+                      gifAlt="데이터 시각화"
+                      isVertical={true}
+                    >
+                      데이터 시각화
+                    </AnimatedText>
                     <ul className="list-none ml-6 mt-1 space-y-1">
                       <li>
                         - Chart.js를 활용한 그룹 통계 시각화 및 멤버 관리 기능
@@ -265,7 +303,14 @@ export default function Resume() {
                     </ul>
                   </li>
                   <li>
-                    온라인 모임 통합 관리
+                    <AnimatedText
+                      gifSrc="/images/onlinemeeting.gif"
+                      gifAlt="온라인 모임"
+                      isVertical={true}
+                    >
+                      온라인 모임
+                    </AnimatedText>{" "}
+                    통합 관리
                     <ul className="list-none ml-6 mt-1 space-y-1">
                       <li>
                         - 워크스페이스 링크(Notion, Figma 등) 및 온라인 회의장
@@ -274,7 +319,15 @@ export default function Resume() {
                     </ul>
                   </li>
                   <li>
-                    재사용 가능한 캘린더 컴포넌트 개발
+                    재사용 가능한{" "}
+                    <AnimatedText
+                      gifSrc="/images/calendar.gif"
+                      gifAlt="캘린더 컴포넌트"
+                      isVertical={true}
+                    >
+                      캘린더 컴포넌트
+                    </AnimatedText>{" "}
+                    개발
                     <ul className="list-none ml-6 mt-1 space-y-1">
                       <li>
                         - react-day-picker 기반으로 주간/월간 뷰 선택이 가능한
@@ -307,7 +360,6 @@ export default function Resume() {
                 <div className="text-black font-medium mb-2">성과</div>
               </td>
               <td className="py-6 px-4 align-top w-2/3">
-                <div className="text-black mb-4">진행적인 인터렉션 구현</div>
                 <ul className="list-disc list-inside text-black space-y-1">
                   <li>
                     초대 흐름 안정성 확보
@@ -372,13 +424,24 @@ export default function Resume() {
                     GPT 기반 플레이리스트 기능 구현
                     <ul className="list-none ml-6 mt-1 space-y-1">
                       <li>
-                        - 사용자 플레이리스트 데이터를 활용하여 GPT 추천 기능
+                        - 사용자 플레이리스트 데이터를 활용하여{" "}
+                        <AnimatedText
+                          gifSrc="/images/recommender.gif"
+                          gifAlt="GPT 추천 기능"
+                        >
+                          GPT 추천 기능
+                        </AnimatedText>{" "}
                         구현
                       </li>
                     </ul>
                   </li>
                   <li>
-                    노래 검색 기능 구현
+                    <AnimatedText
+                      gifSrc="/images/spotifysearch.gif"
+                      gifAlt="노래 검색 기능 구현"
+                    >
+                      노래 검색 기능 구현
+                    </AnimatedText>
                     <ul className="list-none ml-6 mt-1 space-y-1">
                       <li>
                         - Spotify API를 활용한 노래 검색 및 데이터 호출 기능
@@ -387,7 +450,12 @@ export default function Resume() {
                     </ul>
                   </li>
                   <li>
-                    다크모드/라이트모드 구현
+                    <AnimatedText
+                      gifSrc="/images/darkmode.gif"
+                      gifAlt="다크모드/라이트모드 구현"
+                    >
+                      다크모드/라이트모드 구현
+                    </AnimatedText>
                     <ul className="list-none ml-6 mt-1 space-y-1">
                       <li>
                         - document.documentElement의 클래스 조작과 CSS 변수를
@@ -418,15 +486,21 @@ export default function Resume() {
                 <div className="text-black font-medium mb-2">성과</div>
               </td>
               <td className="py-6 px-4 align-top w-2/3">
-                <div className="text-black mb-4">진행적인 인터렉션 구현</div>
                 <ul className="list-disc list-inside text-black space-y-1">
                   <li>
-                    초대 흐름 안정성 확보
+                    레이아웃 시프트 제거
                     <ul className="list-none ml-6 mt-1 space-y-1">
                       <li>
-                        - 로그인/비로그인 시나리오 분기 처리 로직 설계. 비로그인
-                        시 localstorage에 리다이렉트 주소(초대 정보)를 저장하여,
-                        로그인 후 초대 정보 유실 방지 및 자동 합류 구현.
+                        - 스크롤바 동적 생성으로 인한 수평 이동을
+                        overflow-y-scroll로 공간 사전 확보하여 해결
+                      </li>
+                      <li>
+                        - 높이 속성 충돌 및 이모지 크기 미지정 문제를 명시적 값
+                        설정으로 개선
+                      </li>
+                      <li>
+                        - CLS 점수 0.004 → 0.001, 시각적 shift 완전 제거로
+                        안정적인 UX 제공
                       </li>
                     </ul>
                   </li>
@@ -435,15 +509,6 @@ export default function Resume() {
             </tr>
           </tbody>
         </table>
-      </div>
-      <div className="text-black relative group">
-        <Link
-          href="https://github.com/parkjungyuxx"
-          className="underline flex gap-4 items-center"
-          target="_blank"
-        >
-          github.com/parkjungyuxx
-        </Link>
       </div>
     </div>
   );
