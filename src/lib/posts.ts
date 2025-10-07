@@ -14,9 +14,9 @@ export interface Post {
   content: string;
 }
 
-export type FilterCategory = "LIFE" | "DEV" | "REVIEW";
+export type FilterCategory = "LIFE" | "TECH" | "REVIEW";
 
-export const FILTER_CATEGORIES: FilterCategory[] = ["LIFE", "DEV", "REVIEW"];
+export const FILTER_CATEGORIES: FilterCategory[] = ["LIFE", "TECH", "REVIEW"];
 
 export async function getPosts(): Promise<Post[]> {
   try {
