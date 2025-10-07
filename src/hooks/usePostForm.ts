@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createPost } from "@/lib/posts";
 
-type PostCategory = "LIFE" | "DEV" | "REVIEW";
+type PostCategory = "LIFE" | "TECH" | "REVIEW";
 
 interface PostFormData {
   date: string;
@@ -13,7 +13,7 @@ interface PostFormData {
 export function usePostForm() {
   const [formData, setFormData] = useState<PostFormData>({
     date: "",
-    category: "DEV",
+    category: "TECH",
     title: "",
     content: "",
   });
@@ -50,7 +50,7 @@ export function usePostForm() {
         setSubmitSuccess(true);
         setFormData({
           date: "",
-          category: "DEV",
+          category: "TECH",
           title: "",
           content: "",
         });
