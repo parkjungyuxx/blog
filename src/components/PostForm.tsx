@@ -2,7 +2,7 @@ import Link from "next/link";
 
 interface PostFormData {
   date: string;
-  category: "LIFE" | "DEV" | "REVIEW";
+  category: "LIFE" | "TECH" | "REVIEW";
   title: string;
   content: string;
 }
@@ -72,7 +72,7 @@ export function PostForm({
             required
           >
             <option value="LIFE">LIFE</option>
-            <option value="DEV">DEV</option>
+            <option value="TECH">TECH</option>
             <option value="REVIEW">REVIEW</option>
           </select>
         </div>
