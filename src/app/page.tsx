@@ -7,13 +7,13 @@ export default function Home() {
       <div className="grid grid-cols-2">
         <div className="pl-8 flex flex-col gap-20">
           <div>
-            <h1 className="text-[144px] font-bold text-black">(+82)</h1>
+            <h1 className="text-[144px] font-bold text-black">(FE)</h1>
             <h1 className="text-[144px] font-bold text-black">micky.log</h1>
           </div>
           <TypingText />
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 items-start">
           <Link
             href="/resume"
             className="text-[40px] text-black font-medium transition-colors"
