@@ -24,14 +24,6 @@ a {
   text-decoration: underline;
 }
 
-a:not(.gradient-link) {
-  color: inherit;
-}
-
-a:visited {
-  color: inherit;
-}
-
 ::-webkit-scrollbar {
   width: 8px;
 }

@@ -1,5 +1,5 @@
-import Link from "next/link";
 import TypingText from "@/components/TypingText";
+import { TypingEffectLink } from "@/components/TypingEffectLink";
 
 export default function Home() {
   return (
@@ -14,24 +14,15 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-4 items-start">
-          <Link
-            href="/resume"
-            className="text-[40px] text-black font-medium transition-colors"
-          >
+          <TypingEffectLink href="/resume" className="text-[40px] font-medium">
             Resume
-          </Link>
-          <Link
-            href="/posts"
-            className="text-[40px] text-black font-medium transition-colors"
-          >
+          </TypingEffectLink>
+          <TypingEffectLink href="/posts" className="text-[40px] font-medium">
             Post
-          </Link>
-          <Link
-            href="/about"
-            className="text-[40px] text-black font-medium transition-colors"
-          >
+          </TypingEffectLink>
+          <TypingEffectLink href="/about" className="text-[40px] font-medium">
             About
-          </Link>
+          </TypingEffectLink>
         </div>
       </div>
     </div>
