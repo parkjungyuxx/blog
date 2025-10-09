@@ -17,9 +17,9 @@ export function AnimatedArrowText({
     <Link
       href={href}
       className="group inline-flex items-center gap-2 cursor-pointer"
-      target="blank"
+      target="_blank"
     >
-      <span className="text-[32px] font-bold cursor-pointer">{text}</span>
+      <span className="text-[32px] font-bold cursor-pointer underline">{text}</span>
       <Image
         src={arrowImage}
         alt="arrow"
