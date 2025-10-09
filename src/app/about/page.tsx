@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaGithub, FaPhoneAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 
 export default function About() {
@@ -38,10 +38,6 @@ export default function About() {
                         <FaGithub />
                         github.com/parkjungyuxx
                       </Link>
-                    </div>
-
-                    <div className="text-black flex gap-4 items-center">
-                      <FaPhoneAlt /> 010-9540-7787
                     </div>
                   </div>
                 </td>
