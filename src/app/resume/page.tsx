@@ -1,3 +1,4 @@
+import { AnimatedArrowText } from "@/components/AnimatedArrowText";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 
@@ -61,23 +62,10 @@ export default function Resume() {
       {/* 프로젝트 1 - cats-paw */}
       <div className="mb-16">
         <div className="mb-6">
-          <Link
+          <AnimatedArrowText
+            text="Cat's paw"
             href="https://github.com/devcourse-catspaw/catspaw"
-            className="gradient-link text-[32px] font-bold mb-2 inline-block relative no-underline text-black overflow-hidden cursor-pointer"
-            target="_blank"
-          >
-            <span className="relative inline-block">
-              Cat&apos;s paw
-              <span
-                className="absolute inset-0 bg-gradient-to-r from-transparent from-0% via-[rgb(245,143,0)] via-50% to-transparent to-100% bg-[length:200%_100%] bg-clip-text text-transparent opacity-100"
-                style={{
-                  animation: "gradient 4s ease-in-out infinite",
-                }}
-              >
-                Cat&apos;s paw
-              </span>
-            </span>
-          </Link>
+          />
           <div className="text-black text-sm">Frontend</div>
           <div className="text-black text-sm">
             Total Team Size: 4 People (4 FE)
@@ -216,23 +204,10 @@ export default function Resume() {
       {/* 프로젝트 2 - ittaeok */}
       <div className="mb-16">
         <div className="mb-6">
-          <Link
+          <AnimatedArrowText
+            text="ITTAEOK"
             href="https://github.com/prgrms-web-devcourse-final-project/WEB4_5_DOD_FE"
-            className="gradient-link text-[32px] font-bold mb-2 inline-block relative no-underline text-black overflow-hidden cursor-pointer"
-            target="_blank"
-          >
-            <span className="relative inline-block">
-              Ittaeok
-              <span
-                className="absolute inset-0 bg-gradient-to-r from-transparent from-0% via-[rgb(245,143,0)] via-50% to-transparent to-100% bg-[length:200%_100%] bg-clip-text text-transparent opacity-100"
-                style={{
-                  animation: "gradient 4s ease-in-out infinite",
-                }}
-              >
-                Ittaeok
-              </span>
-            </span>
-          </Link>
+          />
           <div className="text-black text-sm">Frontend Developer</div>
           <div className="text-black text-sm">
             Total Team Size: 10 People (5 FE, 5 BE)
@@ -381,23 +356,10 @@ export default function Resume() {
       {/* 프로젝트 3 - popcon */}
       <div className="mb-16">
         <div className="mb-6">
-          <Link
+          <AnimatedArrowText
+            text="POPcon"
             href="https://github.com/devcourse-team3-popcon/popcon"
-            className="gradient-link text-[32px] font-bold mb-2 inline-block relative no-underline text-black overflow-hidden cursor-pointer"
-            target="_blank"
-          >
-            <span className="relative inline-block">
-              POPcon
-              <span
-                className="absolute inset-0 bg-gradient-to-r from-transparent from-0% via-[rgb(245,143,0)] via-50% to-transparent to-100% bg-[length:200%_100%] bg-clip-text text-transparent opacity-100"
-                style={{
-                  animation: "gradient 4s ease-in-out infinite",
-                }}
-              >
-                POPcon
-              </span>
-            </span>
-          </Link>
+          />
           <div className="text-black text-sm">Frontend Developer</div>
           <div className="text-black text-sm">
             Total Team Size: 5 People (5 FE)
