@@ -1,8 +1,17 @@
+"use client";
+
 import { AnimatedArrowText } from "@/components/AnimatedArrowText";
 import AnimatedText from "@/components/AnimatedText";
+import { useToast } from "@/components/Toast";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Resume() {
+  const { showToast, ToastContainer } = useToast();
+
+  useEffect(() => {
+    showToast("빛나는 글씨 위에 마우스를 올려보세요");
+  }, []);
   return (
     <div className="min-h-screen bg-gray-100 py-8 px-8">
       <div className="flex justify-between items-start mb-12">
@@ -472,6 +481,7 @@ export default function Resume() {
           </tbody>
         </table>
       </div>
+      <ToastContainer />
     </div>
   );
 }
