@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function TypingText() {
-  const [displayedText, setDisplayedText] = useState('');
-  const fullText = "I am a developer who always thinks, communicates, and solves problems.";
+  const [displayedText, setDisplayedText] = useState("");
+  const fullText =
+    "I am a developer who always thinks, communicates, and solves problems.";
   const typingSpeed = 50;
 
   useEffect(() => {
@@ -26,24 +27,36 @@ export default function TypingText() {
     const text = displayedText;
     let lastIndex = 0;
 
-    const thinksIndex = text.indexOf('thinks');
+    const thinksIndex = text.indexOf("thinks");
     if (thinksIndex !== -1 && thinksIndex + 6 <= text.length) {
       parts.push(text.slice(lastIndex, thinksIndex));
-      parts.push(<span key="thinks" className="underline inline-block">thinks</span>);
+      parts.push(
+        <span key="thinks" className="underline inline-block">
+          thinks
+        </span>
+      );
       lastIndex = thinksIndex + 6;
     }
 
-    const communicatesIndex = text.indexOf('communicates', lastIndex);
+    const communicatesIndex = text.indexOf("communicates", lastIndex);
     if (communicatesIndex !== -1 && communicatesIndex + 12 <= text.length) {
       parts.push(text.slice(lastIndex, communicatesIndex));
-      parts.push(<span key="communicates" className="underline inline-block">communicates</span>);
+      parts.push(
+        <span key="communicates" className="underline inline-block">
+          communicates
+        </span>
+      );
       lastIndex = communicatesIndex + 12;
     }
 
-    const solvesIndex = text.indexOf('solves problems', lastIndex);
+    const solvesIndex = text.indexOf("solves problems", lastIndex);
     if (solvesIndex !== -1 && solvesIndex + 15 <= text.length) {
       parts.push(text.slice(lastIndex, solvesIndex));
-      parts.push(<span key="solves" className="underline inline-block">solves problems</span>);
+      parts.push(
+        <span key="solves" className="underline inline-block">
+          solves problems
+        </span>
+      );
       lastIndex = solvesIndex + 15;
     }
 
@@ -55,7 +68,7 @@ export default function TypingText() {
   };
 
   return (
-    <p className="text-black text-[28px] leading-snug">
+    <p className="text-black text-lg sm:text-xl lg:text-[28px] leading-snug">
       {renderText()}
     </p>
   );
