@@ -1,8 +1,17 @@
+"use client";
+
+import { useToast } from "@/components/Toast";
 import Link from "next/link";
+import { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 
 export default function About() {
+  const { showToast, ToastContainer } = useToast();
+
+  useEffect(() => {
+    showToast("빛나는 글씨를 클릭해 보세요");
+  }, []);
   return (
     <div className="min-h-screen bg-gray-100 py-8 px-8">
       <div className="flex justify-between items-start mb-12">
@@ -194,6 +203,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }
