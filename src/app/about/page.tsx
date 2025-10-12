@@ -12,16 +12,22 @@ export default function About() {
   useEffect(() => {
     showToast("빛나는 글씨를 클릭해 보세요");
   }, []);
+
   return (
     <div className="min-h-screen bg-gray-100 py-8 px-8">
-      <div className="flex justify-between items-start mb-12">
-        <h1 className="text-[80px] font-bold text-black">About</h1>
-        <Link href="/" className="text-[20px] text-black hover:underline">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-start mb-12 gap-2 md:gap-0">
+        <h1 className="text-5xl md:text-[80px] md:leading-[120px] font-bold text-black">
+          About
+        </h1>
+        <Link
+          href="/"
+          className="text-base md:text-[20px] text-black hover:underline"
+        >
           / HOME
         </Link>
       </div>
 
-      <div className="grid grid-cols-[2fr_8fr] gap-8">
+      <div className="hidden md:grid md:grid-cols-[2fr_8fr] gap-8">
         <div>
           <table className="w-full border-t-2 border-black">
             <thead>
@@ -56,7 +62,6 @@ export default function About() {
         </div>
 
         <div className="space-y-8">
-          {/* Description Table */}
           <div>
             <table className="w-full border-t-2 border-black">
               <thead>
@@ -96,7 +101,6 @@ export default function About() {
             </table>
           </div>
 
-          {/* Education Table */}
           <div>
             <table className="w-full border-t-2 border-black">
               <thead>
@@ -175,7 +179,6 @@ export default function About() {
             </table>
           </div>
 
-          {/* Activities Table */}
           <div>
             <table className="w-full border-t-2 border-black">
               <thead>
@@ -203,6 +206,131 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      <div className="md:hidden space-y-8">
+        <div>
+          <div className="border-t-2 border-black pt-4 pb-4">
+            <div className="font-mono text-sm mb-4">DESCRIPTION /</div>
+            <div className="text-black leading-relaxed text-sm">
+              <p className="mb-4 font-bold">
+                항상 고민하고 소통하며 문제를 해결하는 개발자 박준규입니다.
+              </p>
+              <p className="mb-4">
+                사용자 경험을 최우선으로 생각하며, 복잡한 문제를 단순하고
+                직관적인 해결책으로 풀어내는 것을 좋아합니다. 새로운 기술을
+                배우는 것에 열정적이며, 팀과의 협업을 통해 더 나은 결과를
+                만들어가는 과정을 즐깁니다.
+              </p>
+              <p className="mb-4">
+                React, Next.js, TypeScript를 주로 사용하며, 성능 최적화와
+                유지보수 용이성을 고려한 웹 애플리케이션 개발에 관심이 많습니다.
+              </p>
+              <p>
+                끊임없이 고민하고, 해결을 통해 성과를 만드는 개발자가 되고자
+                합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="border-t-2 border-black pt-4 pb-4">
+            <div className="font-mono text-sm mb-4">CONTACT & CHANNELS /</div>
+            <div className="space-y-3">
+              <div className="text-black flex gap-3 items-center text-sm break-all">
+                <MdOutlineAlternateEmail className="flex-shrink-0" />
+                <span>parkjungyu09@gmail.com</span>
+              </div>
+              <div className="text-black">
+                <Link
+                  href="https://github.com/parkjungyuxx"
+                  className="underline flex gap-3 items-center text-sm break-all"
+                  target="_blank"
+                >
+                  <FaGithub className="flex-shrink-0" />
+                  <span>github.com/parkjungyuxx</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="border-t-2 border-black pt-4 pb-4">
+            <div className="font-mono text-sm mb-4">EDUCATION /</div>
+            <div className="text-black space-y-4">
+              <div>
+                <div className="font-medium mb-2">프로그래머스 데브코스</div>
+                <div className="text-sm text-gray-700 space-y-1">
+                  <div>프로그래머스 데브코스 4기 5회차 (2025.02 - 2025.08)</div>
+                  <div>
+                    - 팀 프로젝트 3회(1차, 2차, 4차){" "}
+                    <Link
+                      href="https://drive.google.com/drive/folders/1Etvmjb7I08WfRogCvpAOsqcpKHs-YZqR?usp=drive_link"
+                      className="gradient-link font-bold inline-block relative no-underline text-black overflow-hidden cursor-pointer"
+                      target="_blank"
+                    >
+                      <span className="relative inline-block">
+                        최우수상
+                        <span
+                          className="absolute inset-0 bg-gradient-to-r from-transparent from-0% via-[rgb(245,143,0)] via-50% to-transparent to-100% bg-[length:200%_100%] bg-clip-text text-transparent opacity-100"
+                          style={{
+                            animation: "gradient 4s ease-in-out infinite",
+                          }}
+                        >
+                          최우수상
+                        </span>
+                      </span>
+                    </Link>{" "}
+                    수상
+                  </div>
+                  <div>- 2차 프로젝트 팀장 경험</div>
+                  <div>
+                    -{" "}
+                    <Link
+                      href="https://drive.google.com/drive/folders/1z4JC8x0Buk7-MKyAprkNLv3mAABqnQty?usp=drive_link"
+                      className="gradient-link font-bold inline-block relative no-underline text-black overflow-hidden cursor-pointer"
+                      target="_blank"
+                    >
+                      <span className="relative inline-block">
+                        동료 평가
+                        <span
+                          className="absolute inset-0 bg-gradient-to-r from-transparent from-0% via-[rgb(245,143,0)] via-50% to-transparent to-100% bg-[length:200%_100%] bg-clip-text text-transparent opacity-100"
+                          style={{
+                            animation: "gradient 4s ease-in-out infinite",
+                          }}
+                        >
+                          동료 평가
+                        </span>
+                      </span>
+                    </Link>
+                    에서 전 항목 만점을 기록하며, 기술 역량과 협업 능력을 입증.
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="font-medium mb-2">숭실대학교</div>
+                <div className="text-sm text-gray-700">
+                  산업정보시스템공학과 전공 (2018.03 - 2025.02)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="border-t-2 border-black pt-4 pb-4">
+            <div className="font-mono text-sm mb-4">ACTIVITIES /</div>
+            <div className="text-black">
+              <div className="font-medium mb-2">모브 스터디 그룹</div>
+              <div className="text-sm text-gray-700">
+                모각코 및 프론트엔드 기술 스터디 (2025.03 - present)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <ToastContainer />
     </div>
   );
