@@ -11,12 +11,12 @@ export function PostsList({ posts, selectedFilter }: PostsListProps) {
 
   return (
     <div className="border-t-2 border-black">
-      <div className="grid grid-cols-[200px_1fr] border-b border-black py-4">
+      <div className="hidden md:grid md:grid-cols-[200px_1fr] border-b border-black py-4">
         <div className="font-mono text-sm text-black">/ DATE</div>
         <div className="font-mono text-sm text-black">/ TITLE</div>
       </div>
 
-      <div>
+      <div className="hidden md:block">
         {filteredPosts.map((post) => (
           <Link
             key={post.id}
@@ -31,8 +31,23 @@ export function PostsList({ posts, selectedFilter }: PostsListProps) {
         ))}
       </div>
 
+      <div className="md:hidden">
+        {filteredPosts.map((post) => (
+          <Link
+            key={post.id}
+            href={`/posts/${post.id}`}
+            className="block border-b border-gray-300 py-4"
+          >
+            <div className="text-black font-medium mb-1 hover:text-[#E67E22] transition-colors">
+              {post.title}
+            </div>
+            <div className="text-gray-600 text-sm">{post.date}</div>
+          </Link>
+        ))}
+      </div>
+
       {filteredPosts.length === 0 && (
-        <div className="text-center py-12 text-gray-500">
+        <div className="text-center py-12 text-gray-500 text-sm md:text-base">
           {selectedFilter
             ? "해당 카테고리에 포스트가 없습니다."
             : "포스트가 없습니다."}
