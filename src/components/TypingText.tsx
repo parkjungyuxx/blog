@@ -68,7 +68,7 @@ export default function TypingText() {
   };
 
   return (
-    <p className="text-black text-lg sm:text-xl lg:text-[28px] leading-snug">
+    <p className="text-black text-lg sm:text-xl lg:text-[28px] leading-snug min-h-[84px] sm:min-h-[96px] lg:min-h-[112px]">
       {renderText()}
     </p>
   );
