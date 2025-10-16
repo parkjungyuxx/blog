@@ -6,6 +6,7 @@ import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { getPostById } from "@/lib/posts";
+import Hashtag from "@/components/Hashtag";
 
 interface PostDetailPageProps {
   params: { id: string };
@@ -47,9 +48,7 @@ export default async function PostDetailPage({ params }: PostDetailPageProps) {
           </div>
           <div className="flex gap-4 text-gray-600 font-mono text-sm items-center">
             <span>{post.date}</span>
-            <span className="px-3 py-1 border border-black text-sm">
-              #{post.category}
-            </span>
+            <Hashtag text={post.category} />
           </div>
         </div>
 
@@ -59,9 +58,7 @@ export default async function PostDetailPage({ params }: PostDetailPageProps) {
           </h1>
           <div className="flex flex-wrap gap-2 text-gray-600 font-mono text-xs items-center">
             <span>{post.date}</span>
-            <span className="px-2 py-1 border border-black text-xs">
-              #{post.category}
-            </span>
+            <Hashtag text={post.category} />
           </div>
         </div>
 
@@ -157,7 +154,9 @@ export default async function PostDetailPage({ params }: PostDetailPageProps) {
               ol: ({ children }) => (
                 <ol className="mb-3 ml-4 list-decimal text-sm">{children}</ol>
               ),
-              li: ({ children }) => <li className="mb-1 text-sm">{children}</li>,
+              li: ({ children }) => (
+                <li className="mb-1 text-sm">{children}</li>
+              ),
               code: (props) => {
                 const { children, className } = props;
                 const match = /language-(\w+)/.exec(className || "");
@@ -203,9 +202,9 @@ export default async function PostDetailPage({ params }: PostDetailPageProps) {
               em: ({ children }) => <em className="italic">{children}</em>,
               img: ({ src, alt }) => (
                 <div className="relative w-full h-auto my-4">
-                  <Image 
-                    src={src as string || ""} 
-                    alt={alt || ""} 
+                  <Image
+                    src={(src as string) || ""}
+                    alt={alt || ""}
                     width={800}
                     height={600}
                     className="rounded-lg w-full h-auto"
