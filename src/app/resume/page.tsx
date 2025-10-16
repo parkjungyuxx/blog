@@ -2,6 +2,7 @@
 
 import { AnimatedArrowText } from "@/components/AnimatedArrowText";
 import AnimatedText from "@/components/AnimatedText";
+import Hashtag from "@/components/Hashtag";
 import { useToast } from "@/components/Toast";
 import Link from "next/link";
 import { useEffect } from "react";
@@ -186,21 +187,11 @@ export default function Resume() {
                   </li>
                 </ul>
                 <div className="flex gap-2 mt-4">
-                  <span className="px-3 py-1 border border-black text-sm">
-                    #React
-                  </span>
-                  <span className="px-3 py-1 border border-black text-sm">
-                    #TypeScript
-                  </span>
-                  <span className="px-3 py-1 border border-black text-sm">
-                    #TailwindCSS
-                  </span>
-                  <span className="px-3 py-1 border border-black text-sm">
-                    #React Router
-                  </span>
-                  <span className="px-3 py-1 border border-black text-sm">
-                    #Supabase
-                  </span>
+                  <Hashtag text="React" />
+                  <Hashtag text="TypeScript" />
+                  <Hashtag text="TailwindCSS" />
+                  <Hashtag text="React Router" />
+                  <Hashtag text="Supabase" />
                 </div>
               </td>
             </tr>
@@ -307,21 +298,11 @@ export default function Resume() {
               </li>
             </ul>
             <div className="flex gap-2 mt-4 flex-wrap">
-              <span className="px-3 py-1 border border-black text-xs">
-                #React
-              </span>
-              <span className="px-3 py-1 border border-black text-xs">
-                #TypeScript
-              </span>
-              <span className="px-3 py-1 border border-black text-xs">
-                #TailwindCSS
-              </span>
-              <span className="px-3 py-1 border border-black text-xs">
-                #React Router
-              </span>
-              <span className="px-3 py-1 border border-black text-xs">
-                #Supabase
-              </span>
+              <Hashtag text="React" />
+              <Hashtag text="TypeScript" />
+              <Hashtag text="TailwindCSS" />
+              <Hashtag text="Router" />
+              <Hashtag text="Supabase" />
             </div>
           </div>
 
@@ -474,21 +455,11 @@ export default function Resume() {
                   </li>
                 </ul>
                 <div className="flex gap-2 mt-4 flex-wrap">
-                  <span className="px-3 py-1 border border-black text-sm">
-                    #Next.js
-                  </span>
-                  <span className="px-3 py-1 border border-black text-sm">
-                    #TypeScript
-                  </span>
-                  <span className="px-3 py-1 border border-black text-sm">
-                    #TailwindCSS
-                  </span>
-                  <span className="px-3 py-1 border border-black text-sm">
-                    #Tanstack Query
-                  </span>
-                  <span className="px-3 py-1 border border-black text-sm">
-                    #Zustand
-                  </span>
+                  <Hashtag text="Next.js" />
+                  <Hashtag text="TypeScript" />
+                  <Hashtag text="TailwindCSS" />
+                  <Hashtag text="Tanstack Query" />
+                  <Hashtag text="Zustand" />
                 </div>
               </td>
             </tr>
@@ -605,21 +576,11 @@ export default function Resume() {
               </li>
             </ul>
             <div className="flex gap-2 mt-4 flex-wrap">
-              <span className="px-3 py-1 border border-black text-xs">
-                #Next.js
-              </span>
-              <span className="px-3 py-1 border border-black text-xs">
-                #TypeScript
-              </span>
-              <span className="px-3 py-1 border border-black text-xs">
-                #TailwindCSS
-              </span>
-              <span className="px-3 py-1 border border-black text-xs">
-                #Tanstack Query
-              </span>
-              <span className="px-3 py-1 border border-black text-xs">
-                #Zustand
-              </span>
+              <Hashtag text="Next.js" />
+              <Hashtag text="TypeScript" />
+              <Hashtag text="TailwindCSS" />
+              <Hashtag text="Tanstack Query" />
+              <Hashtag text="Zustand" />
             </div>
           </div>
 
@@ -716,18 +677,10 @@ export default function Resume() {
                   <li>URL 쿼리 기반 페이지네이션 구현</li>
                 </ul>
                 <div className="flex gap-2 mt-4 flex-wrap">
-                  <span className="px-3 py-1 border border-black text-sm">
-                    #React
-                  </span>
-                  <span className="px-3 py-1 border border-black text-sm">
-                    #TypeScript
-                  </span>
-                  <span className="px-3 py-1 border border-black text-sm">
-                    #TailwindCSS
-                  </span>
-                  <span className="px-3 py-1 border border-black text-sm">
-                    #Zustand
-                  </span>
+                  <Hashtag text="React" />
+                  <Hashtag text="TypeScript" />
+                  <Hashtag text="TailwindCSS" />
+                  <Hashtag text="Zustand" />
                 </div>
               </td>
             </tr>
@@ -816,18 +769,10 @@ export default function Resume() {
               <li>URL 쿼리 기반 페이지네이션 구현</li>
             </ul>
             <div className="flex gap-2 mt-4 flex-wrap">
-              <span className="px-3 py-1 border border-black text-xs">
-                #React
-              </span>
-              <span className="px-3 py-1 border border-black text-xs">
-                #TypeScript
-              </span>
-              <span className="px-3 py-1 border border-black text-xs">
-                #TailwindCSS
-              </span>
-              <span className="px-3 py-1 border border-black text-xs">
-                #Zustand
-              </span>
+              <Hashtag text="React" />
+              <Hashtag text="TypeScript" />
+              <Hashtag text="TailwindCSS" />
+              <Hashtag text="Zustand" />
             </div>
           </div>
 
