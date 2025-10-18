@@ -4,12 +4,13 @@ import { FilterCategory, getPosts } from "@/lib/posts";
 import Link from "next/link";
 
 interface PostsPageProps {
-  searchParams: { filter?: string };
+  searchParams: Promise<{ filter?: string }>; 
 }
 
 export default async function PostsPage({ searchParams }: PostsPageProps) {
   const posts = await getPosts();
-  const selectedFilter = searchParams.filter as FilterCategory | undefined;
+  const params = await searchParams; 
+  const selectedFilter = params.filter as FilterCategory | undefined;
 
   return (
     <div className="min-h-screen bg-gray-100 py-8 px-8">
