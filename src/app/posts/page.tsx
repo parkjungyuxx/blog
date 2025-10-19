@@ -1,16 +1,12 @@
-import { FilterSection } from "@/components/FilterSection";
-import { PostsList } from "@/components/PostsList";
-import { FilterCategory, getPosts } from "@/lib/posts";
+import { getPosts } from "@/lib/posts";
 import Link from "next/link";
+import { ClientPostsContent } from "@/components/ClientPostsContent";
+import { Suspense } from "react";
 
-interface PostsPageProps {
-  searchParams: Promise<{ filter?: string }>; 
-}
+export const revalidate = 3600;
 
-export default async function PostsPage({ searchParams }: PostsPageProps) {
+export default async function PostsPage() {
   const posts = await getPosts();
-  const params = await searchParams; 
-  const selectedFilter = params.filter as FilterCategory | undefined;
 
   return (
     <div className="min-h-screen bg-gray-100 py-8 px-8">
@@ -18,20 +14,17 @@ export default async function PostsPage({ searchParams }: PostsPageProps) {
         <h1 className="text-5xl md:text-[80px] md:leading-[120px] font-bold text-black">
           Posts
         </h1>
-        <Link href="/" className="text-base md:text-[20px] text-black hover:underline">
+        <Link
+          href="/"
+          className="text-base md:text-[20px] text-black hover:underline"
+        >
           / HOME
         </Link>
       </div>
 
-      <div className="hidden md:grid md:grid-cols-[250px_1fr] gap-8">
-        <FilterSection selectedFilter={selectedFilter} />
-        <PostsList posts={posts} selectedFilter={selectedFilter} />
-      </div>
-
-      <div className="md:hidden space-y-6">
-        <FilterSection selectedFilter={selectedFilter} />
-        <PostsList posts={posts} selectedFilter={selectedFilter} />
-      </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ClientPostsContent posts={posts} />
+      </Suspense>
     </div>
   );
 }
